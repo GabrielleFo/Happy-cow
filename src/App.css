@@ -1,5 +1,13 @@
 /* Other rules */
 
+.form h1 {
+  text-align: center;
+}
+/****************NAVIGATION*********/
+.header span {
+  margin-left: 50px;
+  cursor: pointer;
+}
 /*********HEADER********/
 .logo {
   width: 180px;
@@ -17,21 +25,45 @@
   margin: 10px auto auto;
 }
 .resto-infos {
-  border: 2px solid grey;
+  /* border: 2px solid grey; */
   width: 300px;
-  height: 600px;
-  margin-right: auto;
+  height: 530px;
+  margin-right: 40px;
+}
+.resto-detail {
+  width: 300px;
+  height: 300px;
+  margin-right: 20px;
 }
 
-.form {
+.food-infos {
+  width: 300px;
+  height: 460px;
+  margin-right: 40px;
+}
+.juice-infos {
+  width: 300px;
+  height: 400px;
+  margin-right: 40px;
+}
+.form-container {
   position: relative;
-  top: 150px;
-  left: 400px;
   color: white;
+}
+.form {
+  position: absolute;
+  top: 80px;
+  left: 277px;
 }
 
 .resto {
   display: flex;
+  overflow: hidden;
+  overflow-x: scroll;
+}
+.restaurant {
+  display: flex;
+  flex-wrap: wrap;
 }
 /***************IMAGE***************/
 .photo-resto {
@@ -44,6 +76,7 @@
 .image-accueil {
   margin-bottom: 50px;
   height: 300px;
+  width: 100%;
 }
 /********************INPUT*********/
 
@@ -52,7 +85,7 @@
   height: 40px;
 }
 .form button {
-  height: 44px;
+  height: 46px;
   width: 56px;
   background-color: #8f6acd;
   color: white;
