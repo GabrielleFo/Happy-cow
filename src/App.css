@@ -12,9 +12,9 @@
 /****************CONTAINER************/
 .resto-container {
   width: 1280px;
-  display: flex;
-  flex-wrap: wrap;
-  margin: 30px auto auto;
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+  margin: 10px auto auto;
 }
 .resto-infos {
   border: 2px solid grey;
@@ -22,13 +22,16 @@
   height: 600px;
   margin-right: auto;
 }
-.form-container {
-  position: absolute;
-}
+
 .form {
   position: relative;
   top: 150px;
   left: 400px;
+  color: white;
+}
+
+.resto {
+  display: flex;
 }
 /***************IMAGE***************/
 .photo-resto {
@@ -41,4 +44,16 @@
 .image-accueil {
   margin-bottom: 50px;
   height: 300px;
+}
+/********************INPUT*********/
+
+.form input {
+  width: 620px;
+  height: 40px;
+}
+.form button {
+  height: 44px;
+  width: 56px;
+  background-color: #8f6acd;
+  color: white;
 }
