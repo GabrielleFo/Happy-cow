@@ -10,11 +10,16 @@ import Restaurant from "./containers/Restaurant";
 
 //import des composants
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 //import icons
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
-library.add(faSearch);
+import {
+  faSearch,
+  faStar,
+  faStarHalfAlt,
+} from "@fortawesome/free-solid-svg-icons";
+library.add(faSearch, faStar, faStarHalfAlt);
 
 function App() {
   return (
@@ -28,6 +33,7 @@ function App() {
           <Home />
         </Route>
       </Switch>
+      <Footer />
     </Router>
   );
 }

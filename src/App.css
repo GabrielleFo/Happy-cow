@@ -65,6 +65,10 @@
   display: flex;
   flex-wrap: wrap;
 }
+.resto-title {
+  display: flex;
+  justify-content: space-between;
+}
 /***************IMAGE***************/
 .photo-resto {
   width: 270px;
@@ -89,4 +93,13 @@
   width: 56px;
   background-color: #8f6acd;
   color: white;
+}
+/***********************FOOTER****************/
+.footer {
+  margin-top: 50px;
+  height: 65px;
+  background-color: rgb(123, 78, 195);
+  color: white;
+  display: flex;
+  justify-content: center;
 }
