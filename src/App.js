@@ -19,7 +19,10 @@ import {
   faStar,
   faStarHalfAlt,
 } from "@fortawesome/free-solid-svg-icons";
-library.add(faSearch, faStar, faStarHalfAlt);
+
+import { faStar as faStars } from "@fortawesome/free-regular-svg-icons";
+
+library.add(faSearch, faStar, faStarHalfAlt, faStars);
 
 function App() {
   return (
