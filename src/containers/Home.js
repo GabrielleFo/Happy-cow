@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 
 import Logo from "../assets/accueil3.png";
+
+//import du component
+import Result from "../components/Result";
 
 import { Link } from "react-router-dom";
 
@@ -21,6 +24,17 @@ const smoothie = data.filter(
 );
 
 const Home = () => {
+  // barre de recherche
+  const [search, setSearch] = useState("");
+
+  const resultat = [];
+  for (let i = 0; i < data.length; i++) {
+    console.log(data);
+    if (data.indexOf(search) !== -1) {
+      resultat.push(<Result />);
+    }
+  }
+
   return (
     <>
       <div className="form-container">
@@ -28,7 +42,14 @@ const Home = () => {
           <h1>Find Vegan Food </h1>
 
           <form>
-            <input type="text"></input>
+            <input
+              type="text"
+              value={search}
+              onChange={(event) => {
+                const value = event.target.value;
+                setSearch(value);
+              }}
+            ></input>
             <button type="submit">
               <FontAwesomeIcon icon="search" className="icons" />
             </button>
@@ -37,8 +58,8 @@ const Home = () => {
         <img src={Logo} alt="accueil" className="image-accueil" />
       </div>
       <div className="resto-container">
+        {search}
         <h2>Food & product vegan</h2>
-        <FontAwesomeIcon icon={["far", "star"]} className="icons" />
         <div className="resto">
           {data.map((item, index) => {
             //création du tableau pour afficher les étoiles
