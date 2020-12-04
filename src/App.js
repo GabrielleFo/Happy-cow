@@ -11,6 +11,7 @@ import Restaurant from "./containers/Restaurant";
 //import des composants
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Result from "./components/Result";
 
 //import icons
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -29,11 +30,14 @@ function App() {
     <Router>
       <Header />
       <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
         <Route path="/restaurant">
           <Restaurant />
         </Route>
-        <Route path="/">
-          <Home />
+        <Route path="/result/:search">
+          <Result />
         </Route>
       </Switch>
       <Footer />

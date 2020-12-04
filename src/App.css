@@ -3,6 +3,17 @@
 .form h1 {
   text-align: center;
 }
+.result-detail p {
+  margin: 5px;
+}
+
+/*gerer le depassement du titre*/
+.result-detail h3 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; /*mets "..." si trop long*/
+  margin: 5px;
+}
 /****************NAVIGATION*********/
 .header span {
   margin-left: 50px;
@@ -20,12 +31,9 @@
 /****************CONTAINER************/
 .resto-container {
   width: 1280px;
-  /* display: flex; */
-  /* flex-wrap: wrap; */
   margin: 10px auto auto;
 }
 .resto-infos {
-  /* border: 2px solid grey; */
   width: 300px;
   height: 530px;
   margin-right: 40px;
@@ -69,6 +77,38 @@
   display: flex;
   justify-content: space-between;
 }
+.result-container {
+  width: 705px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.result-detail {
+  width: 200px;
+  height: 235px;
+  border: 2px solid grey;
+  margin: 10px auto;
+  padding: 10px;
+}
+.hover-result {
+  display: none;
+}
+/****************HOVER***********/
+
+.result-detail:hover .hover-result {
+  display: block;
+  background-color: white;
+  position: absolute;
+  width: 200px;
+  height: 245px;
+}
+.result-detail:hover .hover-result p {
+  display: flex;
+  justify-content: center;
+}
+.result-detail:hover .hover-result h3 {
+  display: flex;
+  justify-content: center;
+}
 /***************IMAGE***************/
 .photo-resto {
   width: 270px;
@@ -82,11 +122,17 @@
   height: 300px;
   width: 100%;
 }
+.photo-result {
+  width: 200px;
+  height: 140px;
+  object-fit: cover;
+}
 /********************INPUT*********/
 
 .form input {
   width: 620px;
   height: 40px;
+  outline: none; /* retire la bordure bleue de l'input */
 }
 .form button {
   height: 46px;

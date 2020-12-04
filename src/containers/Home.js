@@ -2,10 +2,7 @@ import React, { useState } from "react";
 
 import Logo from "../assets/accueil3.png";
 
-//import du component
-import Result from "../components/Result";
-
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 //import icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -24,16 +21,17 @@ const smoothie = data.filter(
 );
 
 const Home = () => {
+  let history = useHistory();
   // barre de recherche
   const [search, setSearch] = useState("");
 
-  const resultat = [];
-  for (let i = 0; i < data.length; i++) {
-    console.log(data);
-    if (data.indexOf(search) !== -1) {
-      resultat.push(<Result />);
-    }
-  }
+  // const resultat = [];
+  // for (let i = 0; i < data.length; i++) {
+  //   console.log(data);
+  //   if (data[i].indexOf(search) !== -1) {
+  //     resultat.push(data[i]);
+  //   }
+  // }
 
   return (
     <>
@@ -41,15 +39,21 @@ const Home = () => {
         <div className="form">
           <h1>Find Vegan Food </h1>
 
-          <form>
+          <form
+            onSubmit={(event) => {
+              event.preventDefault();
+              history.push("result/" + search);
+            }}
+          >
             <input
               type="text"
+              placeholder="Search by city or zipcode"
               value={search}
               onChange={(event) => {
                 const value = event.target.value;
                 setSearch(value);
               }}
-            ></input>
+            />
             <button type="submit">
               <FontAwesomeIcon icon="search" className="icons" />
             </button>
@@ -58,7 +62,6 @@ const Home = () => {
         <img src={Logo} alt="accueil" className="image-accueil" />
       </div>
       <div className="resto-container">
-        {search}
         <h2>Food & product vegan</h2>
         <div className="resto">
           {data.map((item, index) => {
@@ -103,10 +106,7 @@ const Home = () => {
                   )}
 
                   <h3>{item.name}</h3>
-                  <p>
-                    {stars}
-                    {item.rating}
-                  </p>
+                  <p>{stars}</p>
                   <p>{item.address && item.address.slice(-20, -7)}</p>
                   <p>
                     {item.description && item.description.slice(0, 105) + "..."}
@@ -163,10 +163,7 @@ const Home = () => {
                   )}
 
                   <h3>{item.name}</h3>
-                  <p>
-                    {stars}
-                    {item.rating}
-                  </p>
+                  <p>{stars}</p>
                   <p>{item.address && item.address.slice(-20, -7)}</p>
                   <p>
                     {item.description && item.description.slice(0, 105) + "..."}
@@ -179,7 +176,7 @@ const Home = () => {
           })}
         </div>
         <div className="resto-title">
-          <h2>Vegan Restaurant Near Me</h2>
+          <h2>Vegan Restaurant</h2>
           <Link to="/restaurant">
             <h3>View all</h3>
           </Link>
@@ -228,10 +225,7 @@ const Home = () => {
                   )}
 
                   <h3>{item.name}</h3>
-                  <p>
-                    {stars}
-                    {item.rating}
-                  </p>
+                  <p>{stars}</p>
                   <p>{item.address && item.address.slice(-20, -7)}</p>
                   <p>
                     {item.description && item.description.slice(0, 105) + "..."}
