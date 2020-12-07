@@ -7,13 +7,14 @@
   margin: 5px;
 }
 
-/*gerer le depassement du titre*/
+/* gerer le depassement du titre */
 .result-detail h3 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis; /*mets "..." si trop long*/
   margin: 5px;
 }
+
 /****************NAVIGATION*********/
 .header span {
   margin-left: 50px;
@@ -100,11 +101,12 @@
   position: absolute;
   width: 200px;
   height: 245px;
+  text-align: center;
 }
-.result-detail:hover .hover-result p {
+/* .result-detail:hover .hover-result p {
   display: flex;
   justify-content: center;
-}
+} */
 
 .result-detail:hover .hover-result p:nth-child(2) {
   border-bottom: 2px solid black;
