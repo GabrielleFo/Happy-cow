@@ -113,9 +113,8 @@ const Result = () => {
             return (
               <div className="result-detail">
                 <div className="hover-result">
-                  <p> {icon}</p>
-                  <p className="border">{item.type}</p>
-                  <p>____________</p>
+                  <p>{icon}</p>
+                  <p>{item.type}</p>
                   <h3>{item.name}</h3>
                   <p>{item.address}</p>
                   <p>{item.phone}</p>
@@ -136,7 +135,7 @@ const Result = () => {
                   {icon}
                   <p className="border"></p>
                   <p>{item.type}</p>
-                  <h2>{item.name}</h2>
+                  <h3>{item.name}</h3>
                   <p>{item.address}</p>
                   <p>{item.phone}</p>
                 </div>

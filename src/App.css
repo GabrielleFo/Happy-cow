@@ -105,10 +105,16 @@
   display: flex;
   justify-content: center;
 }
-.result-detail:hover .hover-result h3 {
+
+.result-detail:hover .hover-result p:nth-child(2) {
+  border-bottom: 2px solid black;
+  text-transform: uppercase;
+}
+
+/* .result-detail:hover .hover-result h3 {
   display: flex;
   justify-content: center;
-}
+} */
 /***************IMAGE***************/
 .photo-resto {
   width: 270px;
