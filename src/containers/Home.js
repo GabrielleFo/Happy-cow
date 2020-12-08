@@ -96,22 +96,25 @@ const Home = () => {
             }
             if (index < 10) {
               return (
-                <div className="food-infos">
-                  {item.pictures[0] && (
-                    <img
-                      src={item.pictures[0]}
-                      alt={item.name}
-                      className="photo-resto"
-                    ></img>
-                  )}
+                <Link to={`/detail/${item.placeId}`}>
+                  <div className="food-infos">
+                    {item.pictures[0] && (
+                      <img
+                        src={item.pictures[0]}
+                        alt={item.name}
+                        className="photo-resto"
+                      ></img>
+                    )}
 
-                  <h3>{item.name}</h3>
-                  <p>{stars}</p>
-                  <p>{item.address && item.address.slice(-20, -7)}</p>
-                  <p>
-                    {item.description && item.description.slice(0, 105) + "..."}
-                  </p>
-                </div>
+                    <h3>{item.name}</h3>
+                    <p>{stars}</p>
+                    <p>{item.address && item.address.slice(-20, -7)}</p>
+                    <p>
+                      {item.description &&
+                        item.description.slice(0, 105) + "..."}
+                    </p>
+                  </div>
+                </Link>
               );
             } else {
               return null;

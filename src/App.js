@@ -7,7 +7,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 //import des containers
 import Home from "./containers/Home";
 import Restaurant from "./containers/Restaurant";
-
+import Detail from "./containers/Detail";
 //import des composants
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -38,6 +38,9 @@ function App() {
         </Route>
         <Route path="/result/:search">
           <Result />
+        </Route>
+        <Route path="/detail/:id">
+          <Detail />
         </Route>
       </Switch>
       <Footer />

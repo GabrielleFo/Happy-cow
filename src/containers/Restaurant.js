@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import Logo from "../assets/accueil2.jpg";
 import Pagination from "./Pagination";
-//import packages
-// import ReactPaginate from "react-paginate";
 
 //import du json
 import data from "../assets/restaurants.json";
@@ -13,14 +11,14 @@ const result = data.filter((item) => item.category === 0);
 console.log(result);
 
 const Restaurant = () => {
-  const [currentPage, setCurrentPage] = useState(1);
-  const [postPerPage, setPostPerPage] = useState(10);
-
   //Get current page
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postPerPage] = useState(30);
 
   const indexOfLastPost = currentPage * postPerPage;
   const indexOfFirstPost = indexOfLastPost - postPerPage;
-  data.slice(indexOfFirstPost, indexOfLastPost);
+  const currentPost = result.slice(indexOfFirstPost, indexOfLastPost);
+  // console.log(currentPost);
 
   const paginate = (toto) => setCurrentPage(toto);
 
@@ -30,12 +28,12 @@ const Restaurant = () => {
       <div className="resto-container">
         <Pagination
           postPerPage={postPerPage}
-          totalPost={data.length}
+          totalPost={result.length}
           paginate={paginate}
         />
         <h2>Vegan Restaurant </h2>
         <div className="restaurant">
-          {result.map((item, index) => {
+          {currentPost.map((item, index) => {
             // if (item.pictures[0]) {
             return (
               <div className="resto-detail">
