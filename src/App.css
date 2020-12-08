@@ -83,6 +83,7 @@
   display: flex;
   flex-wrap: wrap;
 }
+
 .result-detail {
   width: 200px;
   height: 235px;
