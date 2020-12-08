@@ -19,11 +19,20 @@ import {
   faSearch,
   faStar,
   faStarHalfAlt,
+  faPhoneAlt,
+  faMapMarkerAlt,
 } from "@fortawesome/free-solid-svg-icons";
 
 import { faStar as faStars } from "@fortawesome/free-regular-svg-icons";
 
-library.add(faSearch, faStar, faStarHalfAlt, faStars);
+library.add(
+  faSearch,
+  faStar,
+  faStarHalfAlt,
+  faStars,
+  faPhoneAlt,
+  faMapMarkerAlt
+);
 
 function App() {
   return (

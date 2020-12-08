@@ -158,3 +158,41 @@
   display: flex;
   justify-content: center;
 }
+/**************Page Detail*********/
+.detail-title {
+  background-color: lightgreen;
+  height: 100px;
+}
+.detail-title h1 {
+  margin-left: 140px;
+  padding-top: 15px;
+}
+.container-detail {
+  width: 1200px;
+  height: 800px;
+  background-color: yellow;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  margin: auto;
+}
+.description-detail {
+  width: 768px;
+  height: 800px;
+  border: 2px solid green;
+}
+.icons-detail {
+  width: 768px;
+  height: 72px;
+  border: 1px solid red;
+  display: flex;
+  justify-content: space-around;
+}
+.map-detail {
+  width: 384px;
+  height: 800px;
+  border: 1px solid pink;
+}
+.icons-detail h3 {
+  margin: 5px 0 5px 0;
+}
