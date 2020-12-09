@@ -160,7 +160,8 @@
 }
 /**************Page Detail*********/
 .detail-title {
-  background-color: lightgreen;
+  background-color: #8f6acd;
+  color: white;
   height: 100px;
 }
 .detail-title h1 {
@@ -170,7 +171,6 @@
 .container-detail {
   width: 1200px;
   height: 800px;
-  background-color: yellow;
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-around;
@@ -179,15 +179,14 @@
 .description-detail {
   width: 768px;
   height: 800px;
-  border: 2px solid green;
 }
 .icons-detail {
   width: 768px;
   height: 72px;
-  border: 1px solid red;
+  margin-top: 30px;
   display: flex;
-  justify-content: space-around;
 }
+
 .map-detail {
   width: 384px;
   height: 800px;
@@ -195,4 +194,35 @@
 }
 .icons-detail h3 {
   margin: 5px 0 5px 0;
+}
+.photos-details img {
+  width: 240px;
+  height: 225px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-right: 24px;
+}
+.photos-details {
+  display: flex;
+  overflow: hidden;
+  overflow-x: scroll;
+}
+.button-detail button {
+  width: 150px;
+  height: 50px;
+  margin: 65px 10px 30px 0;
+  background-color: #8f6acd;
+  color: white;
+  border-radius: 10px;
+  outline: none;
+  cursor: pointer;
+}
+.icons-button {
+  margin-right: 10px;
+}
+.icons-header {
+  margin-right: 20px;
+}
+.phone-detail {
+  margin-right: 50px;
 }

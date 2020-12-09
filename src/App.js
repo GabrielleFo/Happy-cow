@@ -21,6 +21,8 @@ import {
   faStarHalfAlt,
   faPhoneAlt,
   faMapMarkerAlt,
+  faPen,
+  faCamera,
 } from "@fortawesome/free-solid-svg-icons";
 
 import { faStar as faStars } from "@fortawesome/free-regular-svg-icons";
@@ -31,7 +33,9 @@ library.add(
   faStarHalfAlt,
   faStars,
   faPhoneAlt,
-  faMapMarkerAlt
+  faMapMarkerAlt,
+  faPen,
+  faCamera
 );
 
 function App() {

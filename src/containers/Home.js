@@ -63,6 +63,7 @@ const Home = () => {
       </div>
       <div className="resto-container">
         <h2>Food & product vegan</h2>
+
         <div className="resto">
           {data.map((item, index) => {
             //création du tableau pour afficher les étoiles

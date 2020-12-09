@@ -32,23 +32,48 @@ const Detail = () => {
         <div className="map-detail"></div>
         <div className="description-detail">
           <div className="icons-detail">
-            <FontAwesomeIcon icon="fa-phone-alt" className="icons" />
+            <FontAwesomeIcon
+              icon="phone-alt"
+              className="icons-header"
+              size="2x"
+            />
             <div className="phone-detail">
               <h3>Contact</h3>
               <p>{detail.phone}</p>
             </div>
-            <FontAwesomeIcon icon="fa-map-marker-alt" className="icons" />
+
+            <FontAwesomeIcon
+              icon="map-marker-alt"
+              className="icons-header"
+              size="2x"
+            />
             <div className="adress-detail">
               <h3>Find</h3>
               <p>{detail.address}</p>
             </div>
           </div>
-          <p>{detail.description}</p>
+          <div className="detail-detail">
+            <p>{detail.description}</p>
+          </div>
+          <div className="button-detail">
+            <button>
+              <FontAwesomeIcon icon="pen" className="icons-button" size="2x" />
+              Add review
+            </button>
+            <button>
+              <FontAwesomeIcon
+                icon="camera"
+                className="icons-button"
+                size="2x"
+              />
+              Add photos
+            </button>
+          </div>
           <div className="photos-details">
             {detail.pictures.map((item, index) => {
-              return <img src={item.pictures} alt="meal" />;
+              return <img src={item} alt="vision" />;
             })}
-            {/* <img src={detail.pictures[0]} alt="meal  " /> */}
+            {/* <img src={detail.pictures[0]} alt="vision  " /> */}
           </div>
         </div>
       </div>
