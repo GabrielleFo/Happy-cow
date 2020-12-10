@@ -1,5 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
+import GoogleMapReact from "google-map-react";
 
 //import icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -29,7 +30,9 @@ const Detail = () => {
         <h1>{detail.name}</h1>
       </div>
       <div className="container-detail">
-        <div className="map-detail"></div>
+        <div className="map-detail">
+          <GoogleMapReact></GoogleMapReact>
+        </div>
         <div className="description-detail">
           <div className="icons-detail">
             <FontAwesomeIcon
@@ -71,7 +74,14 @@ const Detail = () => {
           </div>
           <div className="photos-details">
             {detail.pictures.map((item, index) => {
-              return <img src={item} alt="vision" />;
+              return (
+                <img
+                  src={item}
+                  alt="vision"
+                  //corrige si un lien image  est cassé sur l'api "internal servor error"
+                  onError={(e) => (e.target.style.display = "none")}
+                />
+              );
             })}
             {/* <img src={detail.pictures[0]} alt="vision  " /> */}
           </div>

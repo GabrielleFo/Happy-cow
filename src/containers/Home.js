@@ -182,7 +182,7 @@ const Home = () => {
         <div className="resto-title">
           <h2>Vegan Restaurant</h2>
           <Link to="/restaurant">
-            <h3>View all</h3>
+            <h3>View all </h3>
           </Link>
         </div>
 

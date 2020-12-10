@@ -6,7 +6,10 @@
 .result-detail p {
   margin: 5px;
 }
-
+a {
+  color: black;
+  text-decoration: none;
+}
 /* gerer le depassement du titre */
 .result-detail h3 {
   white-space: nowrap;
@@ -27,6 +30,8 @@
 .header {
   height: 60px;
   border-bottom: 5px solid #8f6acd;
+  display: flex;
+  align-items: center;
 }
 
 /****************CONTAINER************/
@@ -36,7 +41,7 @@
 }
 .resto-infos {
   width: 300px;
-  height: 530px;
+  height: 430px;
   margin-right: 40px;
 }
 .resto-detail {
@@ -225,4 +230,94 @@
 }
 .phone-detail {
   margin-right: 50px;
+}
+/******MODAL*********************************/
+.button {
+  width: 100px;
+  height: 45px;
+  font-size: 20px;
+  background-color: #8f6acd;
+  color: white;
+  border-radius: 5px;
+  display: flex;
+  outline: none;
+  align-items: center;
+}
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.wrapper {
+  height: 600px;
+  width: 700px;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* centrer le modal sur l'axe x (longueur) et sur l'axe y (hauteur) */
+  transform: translate(-50%, -50%);
+}
+.close {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+}
+/*****************FORM**************/
+form {
+  width: 300px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+input,
+.container-form button,
+.register {
+  width: 250px;
+  height: 50px;
+  margin: 10px 0;
+  outline: none;
+}
+
+.container-form button {
+  border-radius: 5px;
+}
+
+.container-form {
+  display: flex;
+  height: 400px;
+}
+.wrapper h3 {
+  text-align: center;
+  margin-top: 30px;
+}
+.logo-modal {
+  display: flex;
+  justify-content: center;
+}
+.logo-modal img {
+  height: 35px;
+  width: 125px;
+  margin: 5px 5px 5px;
+  border-radius: 5px;
+}
+.login {
+  font-size: 20px;
+  background-color: rgb(123, 78, 195);
+  color: white;
+}
+.register {
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  margin-left: 10px;
+  border-radius: 5px;
+}
+.image-modal img {
+  width: 390px;
+  height: 465px;
 }

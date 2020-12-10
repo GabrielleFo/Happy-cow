@@ -1,9 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import LogiqueModal from "./LogiqueModal";
+import Modal from "./Modal";
+
 import Logo from "../assets/logo.svg";
 
 const Header = () => {
+  const { revele, toogle } = LogiqueModal();
   return (
     <div className="header">
       <Link to="/">
@@ -14,6 +18,10 @@ const Header = () => {
       </Link>
       <span>FOOD & PRODUCT </span>
       <span>ICE CREAM & JUICES</span>
+      <button className="button" onClick={toogle}>
+        Login/join
+      </button>
+      <Modal revele={revele} cache={toogle} />
     </div>
   );
 };
