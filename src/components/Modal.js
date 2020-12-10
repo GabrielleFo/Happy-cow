@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import imageModal from "../assets/imgModal.jpg";
 import apple from "../assets/apple.png";
@@ -46,7 +47,9 @@ const Modal = ({ revele, cache }) =>
               <img src={imageModal} alt="happy cow modal" />
             </div>
           </div>
-          <button className="register">Register</button>
+          <Link to="/register">
+            <button className="register">Register</button>
+          </Link>
         </div>
       </div>
     </React.Fragment>

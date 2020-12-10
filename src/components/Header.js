@@ -18,9 +18,12 @@ const Header = () => {
       </Link>
       <span>FOOD & PRODUCT </span>
       <span>ICE CREAM & JUICES</span>
-      <button className="button" onClick={toogle}>
-        Login/join
-      </button>
+      <div className="button-header">
+        <button className="button" onClick={toogle}>
+          Login/join
+        </button>
+      </div>
+
       <Modal revele={revele} cache={toogle} />
     </div>
   );

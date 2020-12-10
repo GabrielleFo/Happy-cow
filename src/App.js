@@ -8,6 +8,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./containers/Home";
 import Restaurant from "./containers/Restaurant";
 import Detail from "./containers/Detail";
+import Register from "./containers/Register";
 //import des composants
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -45,6 +46,9 @@ function App() {
       <Switch>
         <Route exact path="/">
           <Home />
+        </Route>
+        <Route path="/register">
+          <Register />
         </Route>
         <Route path="/restaurant">
           <Restaurant />
