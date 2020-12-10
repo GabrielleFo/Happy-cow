@@ -27,7 +27,7 @@ const Modal = ({ revele, cache }) =>
           </div>
 
           <div className="container-form">
-            <form>
+            <form className="form-modal">
               <h1>Login to Your Account</h1>
               <label for="name">Username or Email</label>
               <input
@@ -40,16 +40,17 @@ const Modal = ({ revele, cache }) =>
               <button type="submit" className="login">
                 Login
               </button>
-              {/* <p>Or</p> */}
+              <Link to="/register">
+                <button className="register" onClick={cache}>
+                  Register
+                </button>
+              </Link>
             </form>
 
             <div className="image-modal">
               <img src={imageModal} alt="happy cow modal" />
             </div>
           </div>
-          <Link to="/register">
-            <button className="register">Register</button>
-          </Link>
         </div>
       </div>
     </React.Fragment>

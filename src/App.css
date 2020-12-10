@@ -32,6 +32,7 @@ a {
   border-bottom: 5px solid #8f6acd;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 /****************CONTAINER************/
@@ -67,7 +68,7 @@ a {
 .form {
   position: absolute;
   top: 80px;
-  left: 277px;
+  left: 580px;
 }
 
 .resto {
@@ -153,6 +154,7 @@ a {
   width: 56px;
   background-color: #8f6acd;
   color: white;
+  margin-top: 10px;
 }
 /***********************FOOTER****************/
 .footer {
@@ -251,7 +253,7 @@ a {
 }
 .overlay {
   background-color: rgba(0, 0, 0, 0.5);
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -261,7 +263,7 @@ a {
   height: 600px;
   width: 700px;
   background-color: white;
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   z-index: 900; /*permets de resoudre le problème de position du modal sur la page home*/
@@ -275,6 +277,14 @@ a {
 }
 /*****************FORM**************/
 form {
+  width: 300px;
+  height: 400px;
+  display: flex;
+  /* flex-direction: column; */
+  margin-left: 10px;
+}
+.form-modal,
+.form-register {
   width: 300px;
   height: 400px;
   display: flex;
