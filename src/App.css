@@ -374,7 +374,7 @@ select {
   height: 800px;
   margin-left: 10px;
 }
-@media (min-width: 100px) and (max-width: 610px) {
+/* @media (min-width: 100px) and (max-width: 610px) {
   .form {
     position: absolute;
     top: 80px;
@@ -399,4 +399,4 @@ select {
   .form-register {
     width: 60%;
   }
-}
+} */
