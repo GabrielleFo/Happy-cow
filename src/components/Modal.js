@@ -8,14 +8,14 @@ import google from "../assets/google.png";
 //utilisation d'un opérateur ternaire
 const Modal = ({ revele, cache }) =>
   revele ? (
-    <React.Fragment>
+    <>
       <div className="overlay" />
 
       <div className="wrapper">
         <div className="modal">
           <button type="button" className="close" onClick={cache}>
             {/* &times  sers a faire une petite croix */}
-            <span>&times; </span>
+            <p>&times; </p>
           </button>
           <h3>
             We see you love HappyCow, why not login or register or get the app
@@ -53,7 +53,7 @@ const Modal = ({ revele, cache }) =>
           </div>
         </div>
       </div>
-    </React.Fragment>
+    </>
   ) : null;
 
 export default Modal;

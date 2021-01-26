@@ -7,7 +7,7 @@ const Pagination = ({ postPerPage, totalPost, paginate }) => {
     pageNumbers.push(i);
   }
   return (
-    <div>
+    <div className="pagination">
       {pageNumbers.map((number) => {
         return (
           <button key={number} onClick={() => paginate(number)}>

@@ -18,9 +18,10 @@ const Header = () => {
         <Link to="/restaurant">
           <span>RESTAURANTS</span>
         </Link>
-        <span>FOOD & PRODUCT </span>
-        <span>ICE CREAM & JUICES</span>
+        {/* <span>FOOD & PRODUCT </span>
+        <span>ICE CREAM & JUICES</span> */}
       </nav>
+
       <div className="button-header">
         <button className="button" onClick={toogle}>
           Login/join

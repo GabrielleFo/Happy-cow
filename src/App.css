@@ -17,7 +17,12 @@ a {
   text-overflow: ellipsis; /*mets "..." si trop long*/
   margin: 5px;
 }
-
+.form-container h1 {
+  font-size: 36px;
+}
+.marker {
+  font-size: 50px;
+}
 /****************NAVIGATION*********/
 .header span {
   margin-left: 50px;
@@ -40,7 +45,7 @@ a {
   width: 1280px;
   margin: 10px auto auto;
 }
-.resto-infos {
+i .resto-infos {
   width: 300px;
   height: 430px;
   margin-right: 40px;
@@ -136,6 +141,7 @@ a {
   margin-bottom: 50px;
   height: 300px;
   width: 100%;
+  object-fit: cover;
 }
 .photo-result {
   width: 200px;
@@ -144,17 +150,20 @@ a {
 }
 /********************INPUT*********/
 
-.form input {
+/* .form input {
   width: 620px;
   height: 40px;
   outline: none; /* retire la bordure bleue de l'input */
-}
+/*} */
 .form button {
-  height: 46px;
+  height: 56px;
   width: 56px;
   background-color: #8f6acd;
   color: white;
   margin-top: 10px;
+}
+.serach-input {
+  width: 250px;
 }
 /***********************FOOTER****************/
 .footer {
@@ -196,7 +205,7 @@ a {
 
 .map-detail {
   width: 384px;
-  height: 800px;
+  height: 600px;
   border: 1px solid pink;
 }
 .icons-detail h3 {
@@ -272,13 +281,13 @@ a {
 }
 .close {
   position: absolute;
-  right: 15px;
-  top: 10px;
+  right: 10px;
+  top: 150px;
 }
 /*****************FORM**************/
 form {
   width: 300px;
-  height: 400px;
+  /* height: 400px; */
   display: flex;
   /* flex-direction: column; */
   margin-left: 10px;
@@ -339,6 +348,23 @@ select {
   width: 390px;
   height: 465px;
 }
+/*pagination*/
+.pagination {
+  display: flex;
+  justify-content: center;
+}
+.resto-container button {
+  width: 30px;
+  height: 40px;
+  margin-right: 15px;
+  border: none;
+
+  outline: 0;
+}
+.resto-container button:focus {
+  background-color: rgb(123, 78, 195);
+  color: white;
+}
 /********************page register************/
 .container-register {
   display: flex;
@@ -346,6 +372,31 @@ select {
 .form-register {
   width: 600px;
   height: 800px;
-
   margin-left: 10px;
+}
+@media (min-width: 100px) and (max-width: 610px) {
+  .form {
+    position: absolute;
+    top: 80px;
+    left: 5px;
+  }
+  .wrapper {
+    width: 400px;
+  }
+
+  .image-register {
+    width: 10%;
+  }
+  .wrapper-register {
+    background-color: white;
+  }
+  input,
+  select,
+  .login {
+    width: 200px;
+    height: 30px;
+  }
+  .form-register {
+    width: 60%;
+  }
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import GoogleMapReact from "google-map-react";
+import Map from "./Map";
 
 //import icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -28,10 +28,20 @@ const Detail = () => {
     <div>
       <div className="detail-title">
         <h1>{detail.name}</h1>
+        {/* <div className="detail-star">
+          <span>{detail.rating}</span>
+          <span>
+            <FontAwesomeIcon
+              icon={["far", "star"]}
+              className="icons"
+              color="yellow"
+            />
+          </span>
+        </div> */}
       </div>
       <div className="container-detail">
         <div className="map-detail">
-          <GoogleMapReact></GoogleMapReact>
+          <Map />
         </div>
         <div className="description-detail">
           <div className="icons-detail">

@@ -37,7 +37,7 @@ const Home = () => {
     <>
       <div className="form-container">
         <div className="form">
-          <h1>Find Vegan Food </h1>
+          <h1>Find restaurant & Vegan Food </h1>
 
           <form
             onSubmit={(event) => {
@@ -46,6 +46,7 @@ const Home = () => {
             }}
           >
             <input
+              className="search-input"
               type="text"
               placeholder="Search by city or zipcode"
               value={search}
